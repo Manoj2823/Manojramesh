@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><base href="http://localhost:8089/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manoj Ramesh | Full Stack Web Developer (Python, Django, PHP)</title>
+    <meta name="description" content="Portfolio of Manoj Ramesh - Full Stack Web Developer specializing in Python, Django, PHP, MySQL, and modern frontend technologies.">
+    
+    <!-- Favicon (Works on file:// and web servers) -->
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACt0lEQVR4nO2bXWsTQRSG33PS6rZ+kMQvpOiNFyII0qsGBS1V8Eq89Cf4d/wd3hWviijUCzWliOCNFhURURTUprbJxnRnZAMLm8l+pdRdZ47vRWBnZye8z5yZPbvJIUwgjdvPYYEIy63ifR0xvVcYNIn5GW9lARao599sF4VAecZtMV0ERhIIdtm86SFpObPL5otA4LwLXFGaJzbJuGg+UuQtHgUsxXwaBIZwMYSLJIV/Un7AEC6GcDGEiyFcDOFiCNfUfg10KziJ+4P51PO70JjzHmMLu5nj3A3O4t7gQur5PhTq3kNYFwFTIFxVzdx+SwX6WLsEloJjmee5ICR7AahsAPPqKOp6Gs4COK8PYU57ewZkHQCd0HY9w6QJQCWOYBGA17SN31CFZtkDo6XqI22v+BesBuCTwjp3xgAkvYq+rBpDCHGt8g9YvwesGiZO6AO4qI+M9UuKDCcBpN0OTQBfqY83tAPrAbR5c5i9ZW2EDT2NS2o0Kp6UMPulAPChsMabI21XVAMHY199TTWHSVDZ4V9aHmCamUVtZMevav1XBsA0bQL4TD7eUtcdAGvcQQ9B4j5wRns4p2crmf3SAITJUNvIB6K8v8rwL/VZwDQVbnqLqikJwPexthvqOBYNAB+phw/Us++NUJ7ClLiLYHgHiHQnOI3DseOyZ7/UCBhA45mRD5jmnQZQ1JxoAO+pi0/kw1kAL7iDbSMfqHL2SwcQvhp/yj/lAsgzWdYT4D8JYIN28IX67gN4yVuJvw5VMfv7mgg9qH3DTG0lt18AjVPeo0JjvqNu+M8V/E0xhIshXAzhYggXQ7gYwsUQLo6qKMwyE5cVeSUst/5HAISLww9JyyAe/ohHgAQIpvnUJeAihDRPHD+Ik3EJQlbtIJudXYOQVzhJWReLLZ2NS3TxNAzZAmOS8vk/Kj8kJgSx46QAAAAASUVORK5CYII=">
+    <link rel="icon" type="image/png" sizes="64x64" href="image/favicon.png?v=2">
+    <link rel="icon" type="image/svg+xml" href="image/favicon.svg?v=2">
+    <link rel="shortcut icon" href="favicon.ico?v=2">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+    <link rel="stylesheet" href="scratch/style_pct80_top.css">
+</head>
+
+<body>
+    <!-- ----------------- Header / Hero ----------------- -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="image/manoj logo.jpeg" alt="Manoj Ramesh" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header" onclick="closemenu()">Home</a></li>
+                    <li><a href="#about" onclick="closemenu()">About</a></li>
+                    <li><a href="#about" onclick="goToExperienceTab(event); closemenu();">Experience</a></li>
+                    <li><a href="#client-projects" onclick="closemenu()">Client Work</a></li>
+                    <li><a href="#portfolio" onclick="closemenu()">Projects</a></li>
+                    <li><a href="#services" onclick="closemenu()">Services</a></li>
+                    <li><a href="#contact" onclick="closemenu()">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            
+            <div class="header-text">
+                <span class="tagline">Full Stack Web Developer | Python, Django, PHP</span>
+                <h1>Hi, I'm <span>Manoj Ramesh</span>,<br>Based in Madurai, India</h1>
+                <p class="header-bio">
+                    Currently working as a <strong>PHP Developer at CRB Innovative Solutions Pvt Ltd</strong>, building and maintaining 7+ client web systems with robust backend architectures, custom admin panels, and engaging user experiences.
+                </p>
+                <div class="hero-btns">
+                    <a href="#about" onclick="goToExperienceTab(event)" class="btn"><i class="fa-solid fa-briefcase"></i> View Experience</a>
+                    <a href="#portfolio" class="btn btn-outline"><i class="fa-solid fa-laptop-code"></i> Explore Projects</a>
+                    <a href="image/Manoj_Ramesh_Resume.pdf" download="Manoj_Ramesh_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline"><i class="fa-solid fa-file-arrow-down"></i> Download CV</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----------------- About Section ----------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="image/m1.png" alt="Manoj Ramesh">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p class="about-desc">
+                        I am a passionate <strong>Full Stack Web Developer</strong> and currently working as a <strong>PHP Developer at CRB Innovative Solutions Pvt Ltd</strong>, with a solid background in <strong>Python &amp; Django</strong> developed through professional certifications and hands-on production projects.
+                    </p>
+                    <p class="about-desc">
+                        I bring end-to-end expertise spanning frontend development with <strong>HTML5, CSS3, JavaScript, and Bootstrap</strong>, secure backend architectures, administrative panels with full <strong>CRUD operations</strong>, and relational database systems including <strong>MySQL and SQLite</strong>.
+                    </p>
+                    <p class="about-desc">
+                        My practical experience includes developing and maintaining <strong>7 client websites</strong> across healthcare, media, and transport sectors, engineering an online Django Job Portal, a desktop Hospital Management system, computer vision applications with <strong>OpenCV &amp; MediaPipe</strong>, and interactive mobile UI/UX designs in <strong>Figma &amp; Flutter</strong>.
+                    </p>
+                    <p class="about-desc">
+                        I enjoy turning complex problems into simple, beautiful, and intuitive digital solutions. I am a quick learner and a strong team player, always eager to explore new technologies and deliver impactful, scalable software.
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-links" data-tab="Skills" onclick="opentab('Skills', event)">Technical Skills</p>
+                        <p class="tab-links" data-tab="experience" onclick="opentab('experience', event)">Work Experience</p>
+                        <p class="tab-links" data-tab="education" onclick="opentab('education', event)">Education &amp; Certifications</p>
+                    </div>
+
+                    <!-- Skills Tab -->
+                    <div class="tab-contents active-tab" id="Skills">
+                        <div class="skills-compact">
+                            <div class="skill-row">
+                                <span class="skill-label"><i class="fa-solid fa-code"></i> Languages</span>
+                                <div class="skill-pills">
+                                    <span class="pill">Python</span>
+                                    <span class="pill">PHP</span>
+                                    <span class="pill">JavaScript</span>
+                                    <span class="pill">SQL</span>
+                                </div>
+                            </div>
+                            <div class="skill-row">
+                                <span class="skill-label"><i class="fa-solid fa-server"></i> Backend</span>
+                                <div class="skill-pills">
+                                    <span class="pill">Django</span>
+                                    <span class="pill">PHP</span>
+                                    <span class="pill">REST APIs</span>
+                                    <span class="pill">CRUD Operations</span>
+                                    <span class="pill">Admin Panels</span>
+                                </div>
+                            </div>
+                            <div class="skill-row">
+                                <span class="skill-label"><i class="fa-solid fa-laptop-code"></i> Frontend</span>
+                                <div class="skill-pills">
+                                    <span class="pill">HTML5</span>
+                                    <span class="pill">CSS3</span>
+                                    <span class="pill">Bootstrap</span>
+                                    <span class="pill">Responsive UI</span>
+                                    <span class="pill">Flexbox</span>
+                                </div>
+                            </div>
+                            <div class="skill-row">
+                                <span class="skill-label"><i class="fa-solid fa-database"></i> Databases</span>
+                                <div class="skill-pills">
+                                    <span class="pill">MySQL</span>
+                                    <span class="pill">SQLite</span>
+                                </div>
+                            </div>
+                            <div class="skill-row">
+                                <span class="skill-label"><i class="fa-solid fa-toolbox"></i> Tools &amp; More</span>
+                                <div class="skill-pills">
+                                    <span class="pill">Git / GitHub</span>
+                                    <span class="pill">Figma</span>
+                                    <span class="pill">Tkinter</span>
+                                    <span class="pill">OpenCV</span>
+                                    <span class="pill">UI/UX Design</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience Tab -->
+                    <div class="tab-contents" id="experience">
+                        <div class="compact-timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-header">
+                                    <h4>PHP Developer <span>@ CRB Innovative Solutions</span></h4>
+                                    <span class="timeline-date">May 2026 – Present</span>
+                                </div>
+                                <p>Developing &amp; maintaining 7 client websites with PHP, MySQL &amp; custom CRUD admin panels.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-header">
+                                    <h4>Mobile App Developer Intern <span>@ Wizinoa</span> <a href="https://drive.google.com/file/d/1SeJRbdCoPARKc5NvmIj60TiiiS3djqzs/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="timeline-cert" title="View Wizinoa Certificate"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></h4>
+                                    <span class="timeline-date">Jun 2024 – Aug 2024</span>
+                                </div>
+                                <p>Built cross-platform Flutter/Dart apps with RESTful APIs and Figma UI translations.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-header">
+                                    <h4>Tech Job Simulation Intern <span>@ Deloitte</span> <a href="https://drive.google.com/file/d/1a8XQLCjoil1y2o9O_b8Btnmnpqd7zQct/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="timeline-cert" title="View Deloitte Certificate"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></h4>
+                                    <span class="timeline-date">Jan 2024 – Feb 2024</span>
+                                </div>
+                                <p>Data unification algorithm, log security analysis &amp; client visualization dashboards.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-header">
+                                    <h4>Front-End Developer Intern <span>@ WebGapp</span> <a href="https://drive.google.com/file/d/194Sd9KxxtYBKtqY3n8BTfPr70JJgkqTL/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="timeline-cert" title="View WebGapp Certificate"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></h4>
+                                    <span class="timeline-date">Jun 2023 – Jul 2023</span>
+                                </div>
+                                <p>Crafted responsive web interfaces with HTML5, CSS3, Bootstrap &amp; dynamic PHP scripts.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education Tab -->
+                    <div class="tab-contents" id="education">
+                        <div class="compact-timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-header">
+                                    <h4>B.E. Computer Science &amp; Engineering</h4>
+                                    <span class="timeline-date">2021 – 2025</span>
+                                </div>
+                                <p>Fatima Michael College of Engineering and Technology • <strong>CGPA: 7.5 / 10.0</strong></p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-header">
+                                    <h4>Professional Certifications</h4>
+                                </div>
+                                <div class="skill-pills" style="margin-top: 6px;">
+                                    <a href="https://drive.google.com/file/d/1n3PugM1PumfXCnBULHODAvtCDlYxvCdp/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="pill pill-link" title="Click to view Python Full Stack Certificate"><i class="fa-solid fa-certificate" style="color: #ff004f;"></i> Python Full Stack <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 10px; margin-left: 3px; color: #ff004f;"></i></a>
+                                    <a href="https://drive.google.com/file/d/1MVg9RSWsAK6GQ10AkSQnTVGwOfi8_Z6g/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="pill pill-link" title="Click to view Cisco CCNA Certificate"><i class="fa-solid fa-certificate" style="color: #ff004f;"></i> Cisco CCNA <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 10px; margin-left: 3px; color: #ff004f;"></i></a>
+                                    <a href="https://drive.google.com/file/d/1JfpSFy-7IV1XxnDhaRau86LdJG6IN-04/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="pill pill-link" title="Click to view UI/UX Design Certificate"><i class="fa-solid fa-certificate" style="color: #ff004f;"></i> UI/UX Design <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 10px; margin-left: 3px; color: #ff004f;"></i></a>
+                                    <a href="https://drive.google.com/file/d/1HYjTEQ-Je4i0jJEo9oRe0ZLg57Mr2Nta/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="pill pill-link" title="Click to view DCA Certificate"><i class="fa-solid fa-certificate" style="color: #ff004f;"></i> DCA <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 10px; margin-left: 3px; color: #ff004f;"></i></a>
+                                    <a href="https://drive.google.com/file/d/1tR59QTc2dSclfivomRSajhYR82QL5Ack/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="pill pill-link" title="Click to view MS PowerPoint Certificate"><i class="fa-solid fa-certificate" style="color: #ff004f;"></i> MS PowerPoint <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 10px; margin-left: 3px; color: #ff004f;"></i></a>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-header">
+                                    <h4>Languages</h4>
+                                </div>
+                                <p>English (Professional), Tamil (Native)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----------------- Dedicated Experience & Client Work ----------------- -->
+    <div id="client-projects">
+        <div class="container">
+            <h1 class="sub-title">Professional Experience &amp; Client Projects</h1>
+            <p class="section-desc">
+                Current professional role, enterprise contributions, and the real-world client platforms delivered at CRB Innovative Solutions.
+            </p>
+
+            <!-- Main Current Employment Card -->
+            <div class="current-job-card">
+                <div class="job-header">
+                    <div class="job-title-group">
+                        <h3>PHP Developer</h3>
+                        <h4>CRB Innovative Solutions Pvt Ltd</h4>
+                    </div>
+                    <div class="job-meta-badges">
+                        <span class="meta-badge"><i class="fa-solid fa-calendar-days"></i> May 2026 – Present</span>
+                        <span class="meta-badge location"><i class="fa-solid fa-location-dot"></i> Chennai, Tamil Nadu, India</span>
+                    </div>
+                </div>
+
+                <p class="job-overview">
+                    As a core developer at CRB Innovative Solutions Pvt Ltd, I contribute to the end-to-end development, enhancement, and ongoing maintenance of <strong>7 client websites</strong> across healthcare, media, logistics, design, and security domains.
+                </p>
+
+                <h4 style="color: #fff; font-size: 17px; margin-top: 20px; font-weight: 600;">Key Responsibilities &amp; Contributions:</h4>
+                <ul class="job-contributions">
+                    <li>
+                        <i class="fa-solid fa-check-circle"></i>
+                        <strong>Development &amp; Maintenance of 7 Client Websites:</strong> Actively develop, update, and maintain 7 high-traffic client web portals using PHP, MySQL, HTML5, CSS3, and JavaScript.
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-check-circle"></i>
+                        <strong>Full Stack Implementation:</strong> Architect and implement bespoke frontend interfaces and backend logic aligned directly with client business objectives and technical specifications.
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-check-circle"></i>
+                        <strong>Database Architecture &amp; CRUD:</strong> Integrate PHP backend logic with MySQL databases to support reliable data storage, high-speed queries, secure data updates, and record management.
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-check-circle"></i>
+                        <strong>Centralized Admin Panels:</strong> Configure and enhance administrative-panel functionality enabling clients to independently manage dynamic website content, media, and records with CRUD operations.
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-check-circle"></i>
+                        <strong>Agile Customization:</strong> Rapidly customize existing website components and deliver cross-functional frontend and backend modifications to satisfy evolving client needs.
+                    </li>
+                </ul>
+
+                <!-- Key Client Projects Grid -->
+                <h3 class="client-projects-title">
+                    <i class="fa-solid fa-cubes"></i> Key Client Websites &amp; Deliverables
+                </h3>
+
+                <div class="client-grid">
+                    <!-- 1. Apollo Hospital -->
+                    <div class="client-card">
+                        <div class="client-card-top">
+                            <span class="client-category-tag">Healthcare &amp; Hospital Management</span>
+                            <h4>Apollo Hospital Website</h4>
+                            <p>
+                                Implemented core frontend interfaces and backend functionality. Established a secure administrative panel with full CRUD operations to manage doctors, medical services, patient inquiries, and hospital content.
+                            </p>
+                        </div>
+                        <div class="client-card-footer">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Admin Panel</span>
+                            <span class="tech-tag">CRUD</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                    </div>
+
+                    <!-- 2. Jaya News and JayaTV -->
+                    <div class="client-card">
+                        <div class="client-card-top">
+                            <span class="client-category-tag">Media &amp; News Broadcasting</span>
+                            <h4>Jaya News &amp; JayaTV Websites</h4>
+                            <p>
+                                Created separate, responsive frontend user interfaces for both the television network and the news portal. Integrated both platforms with a unified shared admin panel for centralized content distribution.
+                            </p>
+                        </div>
+                        <div class="client-card-footer">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Shared Admin CMS</span>
+                            <span class="tech-tag">HTML5 / CSS3</span>
+                        </div>
+                    </div>
+
+                    <!-- 3. Appaswamy Bone Settings -->
+                    <div class="client-card">
+                        <div class="client-card-top">
+                            <span class="client-category-tag">Orthopedic Healthcare Clinic</span>
+                            <h4>Appaswamy Bone Settings Website</h4>
+                            <p>
+                                Enhanced the existing frontend visual layouts and modified backend components to cater to clinic-specific patient inquiries, treatment showcases, and appointment workflows.
+                            </p>
+                        </div>
+                        <div class="client-card-footer">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">UI Enhancement</span>
+                            <span class="tech-tag">Backend Logic</span>
+                        </div>
+                    </div>
+
+                    <!-- 4. MSS Transport -->
+                    <div class="client-card">
+                        <div class="client-card-top">
+                            <span class="client-category-tag">Logistics &amp; Fleet Services</span>
+                            <h4>MSS Transport Website</h4>
+                            <p>
+                                Applied requested frontend design updates, improved layout presentation across mobile and desktop devices, and refined existing interactive elements for transport booking inquiries.
+                            </p>
+                        </div>
+                        <div class="client-card-footer">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">PHP</span>
+                        </div>
+                    </div>
+
+                    <!-- 5. RS Graphics -->
+                    <div class="client-card">
+                        <div class="client-card-top">
+                            <span class="client-category-tag">Design &amp; Printing Industry</span>
+                            <h4>RS Graphics Website</h4>
+                            <p>
+                                Developed modern, high-conversion page layouts and implemented polished frontend elements using HTML, CSS, and JavaScript to showcase print services and creative portfolios.
+                            </p>
+                        </div>
+                        <div class="client-card-footer">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Responsive UI</span>
+                        </div>
+                    </div>
+
+                    <!-- 6. Guardian Security Chennai -->
+                    <div class="client-card">
+                        <div class="client-card-top">
+                            <span class="client-category-tag">Security &amp; Surveillance</span>
+                            <h4>Guardian Security Chennai Website</h4>
+                            <p>
+                                Implemented and modified frontend interface components to align with brand specifications, highlighting security personnel services, surveillance solutions, and contact funnels.
+                            </p>
+                        </div>
+                        <div class="client-card-footer">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Mobile Optimization</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Internships Section -->
+            <div class="internships-section">
+                <h3 class="client-projects-title">
+                    <i class="fa-solid fa-graduation-cap"></i> Internship Experience &amp; Certifications
+                </h3>
+                <div class="intern-grid">
+                    <!-- Wizinoa -->
+                    <div class="intern-card">
+                        <span class="intern-badge">Jun 2024 – Aug 2024</span>
+                        <h4>Mobile Application Developer Intern</h4>
+                        <div class="intern-company">Wizinoa • <a href="https://drive.google.com/file/d/1SeJRbdCoPARKc5NvmIj60TiiiS3djqzs/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="intern-cert-link" title="Click to view Wizinoa Internship Certificate">Certification <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                        <ul>
+                            <li>Created cross-platform mobile apps for Android and iOS using Dart and Flutter.</li>
+                            <li>Implemented responsive mobile interfaces using Flutter widgets for consistent multi-device experience.</li>
+                            <li>Integrated RESTful APIs to exchange dynamic data and handle real-time content.</li>
+                            <li>Translated Figma UI mockups into fully functional application screens.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Deloitte -->
+                    <div class="intern-card">
+                        <span class="intern-badge">Jan 2024 – Feb 2024</span>
+                        <h4>Technology Job Simulation Intern</h4>
+                        <div class="intern-company">Deloitte • Virtual Simulation • <a href="https://drive.google.com/file/d/1a8XQLCjoil1y2o9O_b8Btnmnpqd7zQct/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="intern-cert-link" title="Click to view Deloitte Job Simulation Certificate">Certification <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                        <ul>
+                            <li>Completed hands-on simulation tasks covering coding, data analysis, and cybersecurity concepts.</li>
+                            <li>Engineered a data-unification algorithm to consolidate multi-source data streams.</li>
+                            <li>Examined server log data to identify potential security issues and suspicious activity.</li>
+                            <li>Built an interactive data-visualization dashboard to report critical findings to clients.</li>
+                        </ul>
+                    </div>
+
+                    <!-- WebGapp -->
+                    <div class="intern-card">
+                        <span class="intern-badge">Jun 2023 – Jul 2023</span>
+                        <h4>Front-End Developer Intern</h4>
+                        <div class="intern-company">WebGapp • <a href="https://drive.google.com/file/d/194Sd9KxxtYBKtqY3n8BTfPr70JJgkqTL/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="intern-cert-link" title="Click to view WebGapp Internship Certificate">Certification <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                        <ul>
+                            <li>Crafted responsive web interfaces using HTML5, CSS3, and Bootstrap for cross-device compatibility.</li>
+                            <li>Integrated PHP scripts to generate dynamic page content and process user form submissions.</li>
+                            <li>Applied modern layout techniques to optimize presentation across mobile, tablet, and desktop.</li>
+                            <li>Collaborated with senior developers on frontend sprints and scheduled updates.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----------------- Projects / Work Section ----------------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">Personal Projects</h1>
+            <p class="section-desc">
+                Production-ready web applications, desktop software, and AI computer vision systems built with Python, Django, MySQL, OpenCV, and Figma.
+            </p>
+
+            <div class="work-list">
+                <!-- 1. Job Portal -->
+                <div class="work">
+                    <img src="image/work4.png" alt="Smart Hire Job Portal">
+                    <div class="layer">
+                        <h3>Job Portal (Smart Hire)</h3>
+                        <p class="tech-stack">Python • Django • HTML5 • CSS3 • Bootstrap • JavaScript • MySQL • SQLite</p>
+                        <p>
+                            Developed a full-stack Django web application featuring user registration, role authentication, URL routing, job seeker &amp; employer dashboards, and database migration handling.
+                        </p>
+                        <a href="https://jobportal-2-y1wu.onrender.com/" target="_blank" title="View Live Job Portal"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <!-- 2. Hospital Management System -->
+                <div class="work">
+                    <img src="image/work1.png" alt="Hospital Management System">
+                    <div class="layer">
+                        <h3>Hospital Management System</h3>
+                        <p class="tech-stack">Python • Tkinter • MySQL Database</p>
+                        <p>
+                            Engineered a comprehensive desktop application to manage patient records, doctor information, and appointment scheduling with full CRUD operations and secure login authentication.
+                        </p>
+                        <a href="https://github.com/Manoj2823/Hospital-Management-System" target="_blank" rel="noopener noreferrer" title="View on GitHub"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+
+                <!-- 3. Virtual Mouse Using Hand Gesture Recognition -->
+                <div class="work">
+                    <img src="image/work3.png" alt="Virtual Mouse Gesture Recognition">
+                    <div class="layer">
+                        <h3>Virtual Mouse (Gesture Recognition)</h3>
+                        <p class="tech-stack">Python • MediaPipe • OpenCV • PyAutoGUI</p>
+                        <p>
+                            Webcam-based touchless mouse that translates hand gestures into real-time cursor movement, left-clicks, and right-clicks with landmark detection and cursor jitter smoothing.
+                        </p>
+                        <a href="https://github.com/Manoj2823/Virtual-Mouse-Using-Hand-gestures" target="_blank" rel="noopener noreferrer" title="View on GitHub"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+
+                <!-- 4. Food Delivery App UI/UX -->
+                <div class="work">
+                    <img src="image/work2.png" alt="Food Delivery App UI/UX Design">
+                    <div class="layer">
+                        <h3>Food Delivery App (Sweet Foods)</h3>
+                        <p class="tech-stack">Figma • Mobile UI/UX Design • Interactive Prototyping</p>
+                        <p>
+                            Designed high-fidelity UI/UX mobile prototypes covering onboarding, user authentication, restaurant catalogs, item filtering, cart, and checkout flow mapping.
+                        </p>
+                        <a href="https://www.figma.com/proto/pyUVQztk7jxgALawlcNxRW/first-look?node-id=0-1&t=zEWCAJIb4KPZZ1Pg-1" target="_blank" title="View Figma Prototype"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <a href="https://github.com/Manoj2823" target="_blank" class="btn btn-center"><i class="fa-brands fa-github"></i> View More on GitHub</a>
+        </div>
+    </div>
+
+    <!-- ----------------- Services Section ----------------- -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <p class="section-desc">Comprehensive full stack web and software development services tailored to client needs.</p>
+
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Full Stack Web Development</h2>
+                    <p>
+                        End-to-end web development with PHP and Python/Django. Designing clean, scalable database architectures with MySQL, building RESTful APIs, and implementing responsive frontends.
+                    </p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-gears"></i>
+                    <h2>Custom Admin Panels &amp; CRUD</h2>
+                    <p>
+                        Developing secure, centralized administrative panels for businesses. Allowing administrators to effortlessly manage website content, services, user inquiries, and dynamic records.
+                    </p>
+                </div>
+                <div>
+                    <i class="fa-brands fa-python"></i>
+                    <h2>Python &amp; Desktop Software</h2>
+                    <p>
+                        Designing dynamic backend services, automation scripts, Tkinter desktop database tools, and innovative computer vision applications using OpenCV and MediaPipe.
+                    </p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-pen-ruler"></i>
+                    <h2>UI/UX &amp; Mobile App Design</h2>
+                    <p>
+                        Crafting intuitive user journeys and high-fidelity clickable prototypes in Figma, and developing cross-platform mobile apps for Android and iOS using Flutter and Dart.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----------------- Contact Section ----------------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i> manojramesh2808@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +91-6374320021</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Madurai, Tamil Nadu, India</p>
+
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/manojramesh28" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://github.com/Manoj2823" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.naukri.com/mnjuser/profile?id=&altresid" target="_blank" rel="noopener noreferrer" title="Naukri"><img src="image/naukri.png" alt="Naukri" class="naukri-icon"></a>
+                        <a href="https://www.instagram.com/___m___a___n___o__j___/" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+
+                    <a href="image/Manoj_Ramesh_Resume.pdf" download="Manoj_Ramesh_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn2">
+                        <i class="fa-solid fa-file-arrow-down"></i> Download Resume
+                    </a>
+                </div>
+
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="project" rows="6" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn btn2"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>Copyright &copy; 2026 <strong>Manoj Ramesh</strong>. All Rights Reserved. Built with <i class="fa-solid fa-heart"></i></p>
+        </div>
+    </div>
+
+    <!-- ----------------- External Scripts ----------------- -->
+    <script src="script.js"></script>
+</body>
+
+</html>

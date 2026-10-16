@@ -1055,8 +1055,18 @@ form .btn2 {
 }
 
 @media only screen and (max-width: 768px) {
+    #header {
+        background-image: url('image/phn img.png');
+        background-size: cover;
+        background-position: right top;
+    }
+
     .container {
         padding: 10px 6%;
+    }
+
+    .logo {
+        width: 140px;
     }
 
     nav .fa-solid {
@@ -1094,15 +1104,19 @@ form .btn2 {
     }
 
     .header-text {
-        margin-top: 35%;
+        margin-top: 25%;
     }
 
     .header-text h1 {
-        font-size: 36px;
+        font-size: 34px;
     }
 
     .header-text .tagline {
-        font-size: 15px;
+        font-size: 13px;
+        letter-spacing: 1px;
+        white-space: normal;
+        line-height: 1.4;
+        max-width: 100%;
     }
 
     .sub-title {
@@ -1127,22 +1141,40 @@ form .btn2 {
 }
 
 @media only screen and (max-width: 480px) {
+    .logo {
+        width: 125px;
+    }
+
+    .header-text {
+        margin-top: 20%;
+    }
+
+    .header-text .tagline {
+        font-size: 11px;
+        letter-spacing: 0.5px;
+        padding: 5px 12px;
+    }
+
     .header-text h1 {
-        font-size: 30px;
+        font-size: 28px;
     }
 
     .header-bio {
-        font-size: 15px;
+        font-size: 14px;
+        line-height: 1.5;
     }
 
     .hero-btns {
         flex-direction: column;
         align-items: stretch;
+        gap: 12px;
     }
 
     .hero-btns .btn {
         text-align: center;
         justify-content: center;
+        padding: 11px 20px;
+        font-size: 14px;
     }
 
     .tab-titles {
